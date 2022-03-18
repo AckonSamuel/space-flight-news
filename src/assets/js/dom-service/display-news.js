@@ -26,7 +26,6 @@ const getItemChild = () => {
 const getIcons = () => {
   const commentSpan = document.createElement('span');
   commentSpan.innerHTML = 'comment <i class="fa fa-comment"></i>';
-  commentSpan.classList.add('comment-span');
   const likeSpan = document.createElement('span');
   likeSpan.innerHTML = 'like <i class="fa fa-heart"></i>';
 
@@ -43,7 +42,7 @@ const displayItem = async (data) => {
     titleElement.textContent = item.title;
     descElement.textContent = item.summary;
     const [commentSpan, likeSpan] = getIcons();
-    commentSpan.id = item.id;
+
     [commentSpan, likeSpan].forEach((element) => interactionCont.appendChild(element));
 
     const itemElements = [img, titleElement, descElement, interactionCont, reserveBtn];
