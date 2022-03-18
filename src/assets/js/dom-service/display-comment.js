@@ -105,7 +105,7 @@ const displayModal = async (data) => {
     commentTitle.textContent = 'Comments';
     commentDetails.innerHTML = '';
     const commentInfo = await getCommentsData(data.id);
-    commentInfo.forEach((item) => {
+   await commentInfo.forEach((item) => {
       commentInfo.innerHTML += `
       <p> ${item.username} : ${item.creation_date} </p>
       <p> ${item.comment} </p>
