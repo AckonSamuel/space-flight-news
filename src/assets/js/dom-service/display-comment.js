@@ -100,6 +100,7 @@ const displayModal = async (data) => {
   itemElements.forEach((val) => {
     modalHeader.appendChild(val);
   });
+
   submit.addEventListener('click', async () => {
     addComment(data.id, inputName.value, inputComment.value);
     commentTitle.textContent = 'Comments';

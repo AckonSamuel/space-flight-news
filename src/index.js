@@ -21,7 +21,6 @@ getAllNews();
 const getComment = async (g) => {
   const result = await fetch(`https://api.spaceflightnewsapi.net/v3/articles/${g}`).then((response) => response.json())
     .catch((err) => new Error(err));
-  // console.log(result);
   return result;
 };
 
@@ -37,9 +36,6 @@ document.addEventListener('click', async (e) => {
     document.querySelector('main').classList.toggle('dn');
   }
   targetd = !e.target.classList.contains('comment-span');
-  // const letit = await initializeComments();
-  // const gup = Number(letit);
-  // console.log(gup);
 });
 
 document.addEventListener('click', async (e) => {
