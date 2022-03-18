@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
   background-color: aliceblue;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 main {
